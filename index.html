@@ -1,6 +1,5 @@
 <!doctype HTML>
 <html>
-<link rel="icon" href="data:;base64,iVBORw0KGgo=">
 <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
 <script src="https://raw.githack.com/jeromeetienne/AR.js/2.0.8/aframe/build/aframe-ar.js"></script>
 <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
@@ -61,10 +60,6 @@ AFRAME.registerComponent('run', {
 </script>
 
 <a-scene embedded vr-mode-ui="enabled: false;" arjs="debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 3x3;">
-    <a-assets>
-	<img id="grid" src="images/border.png" />
-    </a-assets>
-
     <a-marker type="barcode" value="0" id="m0" registerevents>
         <a-plane position="0 0 0" 
                  rotation="-90 0 0"
