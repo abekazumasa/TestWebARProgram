@@ -8,7 +8,8 @@
         <script src="https://raw.githack.com/jeromeetienne/AR.js/2.0.8/aframe/build/aframe-ar.js"></script>
         <script src="https://raw.githack.com/AR-js-org/AR.js/master/three.js/build/ar.js"></script>
         <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
-        <script src="./lib/dist/main.js"></script>
+         <script src="./lib/src/index.js"></script>
+        
     </head>
     <body style="margin : 0px; overflow: hidden;">
         
@@ -16,7 +17,15 @@
             <a-assets>
                 <a-asset-item id="untitled-obj" src="./lib/Model/untitled.glb"></a-asset-item>
             </a-assets>
-            <a-entity camera></a-entity>
+            <a-marker type="pattern" url="./lib/Marker/pattern-0.patt" id="Marker_0" registerevents>
+                <!-- <a-sphere material="" transparent="true" opacity="0.1" id="makerPos" geometry=""></a-sphere> -->
+            </a-marker>
+            <a-marker type="pattern" url="./lib/Marker/pattern-1.patt" id="Marker_1" registerevents></a-marker>
+                <a-marker type="pattern" url="./lib/Marker/pattern-2.patt" id="Marker_2" registerevents></a-marker>
+                <a-marker type="pattern" url="./lib/Marker/pattern-3.patt" id="Marker_3" registerevents></a-marker>
+             <a-entity camera></a-entity>
+
+            <a-entity run></a-entity>
         </a-scene>
     </body>
 </html>
