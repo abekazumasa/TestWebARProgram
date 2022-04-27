@@ -22,9 +22,18 @@
             <a-marker type="pattern" url="./lib/Marker/pattern-2.patt" id="Marker_2" registerevents></a-marker>
             <a-marker type="pattern" url="./lib/Marker/pattern-3.patt" id="Marker_3" registerevents></a-marker>
        
-            <button id="start" style="z-index: 100; position: relative; ">Play Sound</button>
-             <a-entity camera ></a-entity>
-             <a-entity run></a-entity>
-            </a-scene>
+            <a-entity camera ></a-entity>
+            <a-entity run></a-entity>
+        </a-scene>
+        <button id="start">Play</button>
+        <script>
+            function playSound() {
+	const audio = document.getElementById("arjs-video");
+	audio.play().catch((err) => alert(err));
+  }
+  document.querySelector("#start").addEventListener("click", function() {
+	playSound();
+  });
+        </script>
     </body>
 </html>
